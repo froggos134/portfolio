@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://yn1ax8e85dey"]
+
+[ext_resource type="PackedScene" uid="uid://d1pxvw3i8ewj7" path="res://Scenes/player.tscn" id="1_a5whp"]
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_md3b6"]
+[ext_resource type="PackedScene" uid="uid://cn3u1bc4yu5ck" path="res://Scenes/asteroid.tscn" id="3_onc6d"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_md3b6")
+
+[node name="Player" parent="." instance=ExtResource("1_a5whp")]
+position = Vector2(640, 360)
+
+[node name="Lasers" type="Node" parent="."]
+
+[node name="Asteroids" type="Node" parent="."]
+
+[node name="Asteroid" parent="Asteroids" instance=ExtResource("3_onc6d")]
+position = Vector2(450, 291)
+
+[node name="Asteroid2" parent="Asteroids" instance=ExtResource("3_onc6d")]
+position = Vector2(767, 118)
+
+[node name="Asteroid3" parent="Asteroids" instance=ExtResource("3_onc6d")]
+position = Vector2(1007, 449)
+
+[node name="Asteroid4" parent="Asteroids" instance=ExtResource("3_onc6d")]
+position = Vector2(207, 589)
+
+[node name="Asteroid5" parent="Asteroids" instance=ExtResource("3_onc6d")]
+position = Vector2(732, 606)
